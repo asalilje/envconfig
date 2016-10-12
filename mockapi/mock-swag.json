@@ -1,0 +1,20 @@
+{
+  "swaglist": [
+    {
+      "thing": "Cats",
+      "reason": "Because they're on Youtube."
+    },
+    {
+      "thing": "Unicorns",
+      "reason": "Because it's true they exist."
+    },
+    {
+      "thing": "Raspberry Pi",
+      "reason": "Because you can build stuff with them."
+    },
+    {
+      "thing": "Cheese",
+      "reason": "Because it's very tasty."
+    }
+  ]
+}
