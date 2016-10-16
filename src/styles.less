@@ -1,0 +1,42 @@
+
+
+.groovy {
+
+    &__container {
+    }
+
+    &__message {
+        color: magenta;
+        font-size: 50px;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin: 50px auto 0 auto;
+        padding: 30px;
+        text-align: center;
+        width: 50%;
+        background-color: #ededed;
+    }
+
+    &__things {
+        display: table;
+        width: 50%;
+        margin: 20px auto;
+        padding: 30px;
+    }
+
+    &__thing {
+        display: table-cell;
+        .text;
+        background-color: pink;
+
+        .groovy__container & {
+            background-color: black;
+        }
+    }
+
+}
+
+.text {
+    font-size: 40px;
+    color: red;
+}

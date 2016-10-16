@@ -29,7 +29,7 @@ var config = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
-      { test: /(\.css)$/, loaders: ['style', 'css']},
+      { test: /\.(css|less)$/, loader: "style!css?modules&importLoaders=1&sourceMap&localIdentName=test_[hash:base64:5]!less?sourceMap" }
     ]
   },
 };

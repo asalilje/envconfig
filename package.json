@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:dev": "npm run clean-dist && npm run copy-html && npm run copy-mock && npm run webpack:dev",
+    "build:dev": "npm run clean-dist && npm run copy-html && npm run copy-css && npm run copy-mock && npm run open && npm run webpack:dev",
     "webpack:dev": "webpack-dev-server --config webpack.dev.config.js --inline --hot",
     "clean-dist": "node_modules/.bin/rimraf ./dist && mkdir dist",
     "copy-html": "cp ./src/index.html ./dist/index.html",
-    "copy-mock": "cp ./mockapi/*.* ./dist/"
+    "copy-css": "cp ./src/externalstyles.css ./dist/externalstyles.css",
+    "copy-mock": "cp ./mockapi/*.* ./dist/",
+    "open": "open http://localhost:8080"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +24,9 @@
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "css-loader": "^0.25.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "open": "0.0.5",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",

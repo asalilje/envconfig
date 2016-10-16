@@ -1,5 +1,6 @@
 import React from 'react';
 import {DoRequest} from './ajax';
+import Styles from './styles.less';
 
 class App extends React.Component {
 
@@ -33,21 +34,20 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="groovymessage">#Yolo swag!</div>
+      <div className={Styles.groovy__container}>
+        <div className={ Styles.groovy__message }>hhhohoh</div>
+        <div className={ Styles.groovy__message }>#Yolo swag!</div>
 
-        { this.state.error && <div className="groovyerror">An error occurred :(</div> }
+        { this.state.error && <div className={Styles.groovyerror}>An error occurred :(</div> }
 
         { this.state.groovythings &&
-          <div className="groovythings">
-            <div className="groovyitem">
+          <div className={Styles.groovy__things}>
             {this.state.groovythings.map(item =>
-              <div className="groovyitem">
-                <div className="groovything">{item.thing}</div>
-                <div className="groovyreason">{item.reason}</div>
+              <div>
+                <div className={ Styles.groovy__thing }>{item.thing}</div>
+                <div className={ Styles.groovy__thing }>{item.reason}</div>
               </div>
             )}
-          </div>
         </div>
         }
       </div>
